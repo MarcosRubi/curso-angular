@@ -1,0 +1,23 @@
+<aside class="bg-dark border-right p-3 text-white" id="sidebar">
+  <h3>Gifs App</h3>
+  <hr />
+
+  <div class="list-group list-reset">
+    <div
+      class="list-group-item list-group-item-action d-flex align-items-center justify-content-between"
+      *ngFor="let tag of tags; let i = index"
+    >
+      <button
+        (click)="searchTag(tag)"
+        class="btn-tag align-self-stretch text-start"
+      >
+        <span>{{ tag | titlecase }}</span>
+      </button>
+      <button>
+        <span class="fw-bold text-danger fs-4" (click)="removeTagList(i)"
+          >X</span
+        >
+      </button>
+    </div>
+  </div>
+</aside>

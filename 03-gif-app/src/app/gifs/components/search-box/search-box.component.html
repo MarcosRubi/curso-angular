@@ -1,0 +1,24 @@
+<header
+  class="search-gif py-3 bg-dark text-white d-flex justify-content-center"
+>
+  <div class="col-10 col-lg-8 col-xl-4">
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Nombre del gif"
+        aria-label="Nombre del gif"
+        aria-describedby="button search gif"
+        #txtSearch
+        (keyup.enter)="searchTag()"
+      />
+      <button
+        class="btn btn-primary px-5 fw-bold text-uppercase"
+        type="button"
+        id="button search gif"
+      >
+        Buscar
+      </button>
+    </div>
+  </div>
+</header>
