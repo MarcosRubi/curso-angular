@@ -1,0 +1,25 @@
+<article class="gif__card bg-dark text-white rounded overflow-hidden">
+  <a
+    [href]="gif.images.hd?.mp4"
+    target="_blank"
+    class="text-decoration-none text-white"
+  >
+    <div class="overflow-hidden">
+      <!-- <img
+        [src]="gif.images.downsized_medium.url"
+        class="card-img-top d-flex"
+        [alt]="gif.title"
+        [title]="gif.title"
+      /> -->
+      <shared-lazy-image
+        [url]="gif.images.downsized_medium.url"
+        [alt]="gif.title || 'Title not found'"
+      ></shared-lazy-image>
+    </div>
+    <div class="card-body">
+      <span class="card-text">
+        {{ gif.title }}
+      </span>
+    </div>
+  </a>
+</article>

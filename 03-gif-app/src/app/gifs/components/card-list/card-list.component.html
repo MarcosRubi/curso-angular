@@ -1,27 +1,3 @@
-<h1 class="px-3" *ngIf="gifs.length !== 0">Resultados de búsqueda</h1>
-<div class="gifs__container">
-  <article
-    class="gif__card bg-dark text-white rounded overflow-hidden"
-    *ngFor="let gif of gifs"
-  >
-    <a
-      [href]="gif.images.hd?.mp4"
-      target="_blank"
-      class="text-decoration-none text-white"
-    >
-      <div class="overflow-hidden">
-        <img
-          [src]="gif.images.downsized_medium.url"
-          class="card-img-top d-flex"
-          [alt]="gif.title"
-          [title]="gif.title"
-        />
-      </div>
-      <div class="card-body">
-        <span class="card-text">
-          {{ gif.title }}
-        </span>
-      </div>
-    </a>
-  </article>
+<div class="gifs__container mt-4">
+  <gifs-card *ngFor="let gif of gifs" [gif]="gif"> </gifs-card>
 </div>
