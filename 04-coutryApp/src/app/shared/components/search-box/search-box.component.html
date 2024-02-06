@@ -1,0 +1,11 @@
+<div class="input-group">
+  <label for="search" class="d-none">Buscar</label>
+  <input
+    type="text"
+    [placeholder]="placeholder"
+    id="search"
+    class="form-control"
+    #txtInput
+    (keyup)="emitValue(txtInput.value)"
+  />
+</div>
