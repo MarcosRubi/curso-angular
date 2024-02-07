@@ -6,6 +6,7 @@
     id="search"
     class="form-control"
     #txtInput
-    (keyup)="emitValue(txtInput.value)"
+    (keyup)="onKeyPress(txtInput.value)"
+    value="{{ initialValue }}"
   />
 </div>
